@@ -3,4 +3,5 @@
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
 
 require 'tunnelup'
-require 'tunnelup/cli'
+
+Tunnelup::Cli.start(ARGV)
