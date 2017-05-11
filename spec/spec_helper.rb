@@ -7,3 +7,7 @@ VCR.configure do |c|
   c.hook_into :webmock
   c.filter_sensitive_data('<API_TOKEN>') { ENV['API_TOKEN'] }
 end
+
+Tunnelup.configure do |config|
+  config.api_token = ENV['API_TOKEN']
+end

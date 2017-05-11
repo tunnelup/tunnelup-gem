@@ -8,7 +8,9 @@ module Tunnelup
       end
 
       def self.get(path)
-        JSON.parse RestClient.get("#{ENDPOINT}#{path}?api_token=#{ENV['API_TOKEN']}", accept: :json)
+        api_token = ::Tunnelup.configuration.api_token
+
+        JSON.parse RestClient.get("#{ENDPOINT}#{path}?api_token=#{api_token}", accept: :json)
       end
     end
   end
