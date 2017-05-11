@@ -1,6 +1,6 @@
 module Tunnelup
   module Api
-    class User
+    class User < Base
       def self.authenticate(email:, password:)
 
       end
