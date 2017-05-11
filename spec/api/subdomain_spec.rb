@@ -2,12 +2,6 @@
 require 'spec_helper'
 
 describe Tunnelup::Api::Subdomain do
-  let!(:client) do
-    # Tunnelup::Client.new(
-    #   api_key: ENV['API_KEY']
-    # )
-  end
-
   describe '.all' do
     let(:request) do
       VCR.use_cassette('get_all_subdomains_success') do

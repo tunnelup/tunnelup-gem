@@ -7,14 +7,12 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
       User-Agent:
-      - rest-client/2.0.1 (darwin15.3.0 x86_64) ruby/2.3.0p0
-      Host:
-      - tunnelup.herokuapp.com
+      - tunnelup-ruby/0.1.0.pre
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
@@ -23,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 11 May 2017 01:26:36 GMT
+      - Thu, 11 May 2017 01:39:55 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -33,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b3216fb3-92d9-4230-a4db-c8318963f275
+      - 61b8b4d5-9973-4db2-8934-1a0306a57960
       X-Runtime:
-      - '0.022224'
+      - '0.011829'
       Transfer-Encoding:
       - chunked
       Via:
@@ -44,5 +42,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"subdomains":[]}'
     http_version: 
-  recorded_at: Thu, 11 May 2017 01:26:37 GMT
+  recorded_at: Thu, 11 May 2017 01:39:56 GMT
 recorded_with: VCR 3.0.3

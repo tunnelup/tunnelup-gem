@@ -10,7 +10,14 @@ module Tunnelup
       def self.get(path)
         api_token = ::Tunnelup.configuration.api_token
 
-        JSON.parse RestClient.get("#{ENDPOINT}#{path}?api_token=#{api_token}", accept: :json)
+        response = Faraday.new(
+          url: "#{ENDPOINT}#{path}?api_token=#{api_token}",
+          headers: {
+            user_agent: "tunnelup-ruby/#{Tunnelup::VERSION}"
+          }
+        ).get
+
+        JSON.parse(response)
       end
     end
   end

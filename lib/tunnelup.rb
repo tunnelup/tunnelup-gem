@@ -1,6 +1,4 @@
-require "tunnelup/version"
-require 'rest-client'
-
+require 'faraday'
 
 require 'tunnelup/api/resource'
 require 'tunnelup/api/subdomain'
@@ -8,6 +6,7 @@ require 'tunnelup/api/tunnel'
 require 'tunnelup/api/user'
 require 'tunnelup/cli'
 require 'tunnelup/client'
+require 'tunnelup/version'
 
 module Tunnelup
   class << self
